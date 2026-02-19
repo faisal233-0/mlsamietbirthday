@@ -76,14 +76,8 @@ export function useHostGame() {
       setTimeLeft(30);
       setShowHint(false);
       setAnswers([]);
-       setCurrentPuzzleIndex(next);
+      setCurrentPuzzleIndex(next);
       await updateRoomStatus(roomCode, "playing", next);
-    }
-  };
-      setStatus("playing");
-      setTimeLeft(30);
-      setShowHint(false);
-      setAnswers([]);
     }
   };
 
