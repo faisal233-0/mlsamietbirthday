@@ -98,7 +98,7 @@ export function usePlayerGame(roomCode: string) {
 
           if (room.status === "reveal") {
             // Host revealed answer — show it to players
-            setRevealedAnswer(puzzles[room.current_puzzle_index]?.answer ?? null);
+            setRevealedAnswer(null);
             setStatus((prev) => (prev === "answered" || prev === "playing" ? "reveal" : prev));
           } else if (room.status === "playing") {
             setCurrentPuzzleIndex(room.current_puzzle_index);
