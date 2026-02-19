@@ -72,8 +72,14 @@ export function useHostGame() {
       await updateRoomStatus(roomCode, "finished");
       setStatus("finished");
     } else {
-      setCurrentPuzzleIndex(next);
+      setStatus("playing");
+      setTimeLeft(30);
+      setShowHint(false);
+      setAnswers([]);
+       setCurrentPuzzleIndex(next);
       await updateRoomStatus(roomCode, "playing", next);
+    }
+  };
       setStatus("playing");
       setTimeLeft(30);
       setShowHint(false);
